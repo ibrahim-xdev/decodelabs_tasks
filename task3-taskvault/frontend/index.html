@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskVault — Task Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="container navbar-content">
+            <div class="logo">
+                Task<span>Vault</span>
+            </div>
+
+            <div class="navbar-right">
+                <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+                    <span id="themeIcon">🌙</span>
+                    <span id="themeText">Dark</span>
+                </button>
+                <div class="status">
+                    <span class="status-dot"></span>
+                    Task Manager
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="container">
+
+        <!-- Hero -->
+
+        <section class="hero">
+
+            <div>
+
+                <h1>
+                    Manage your tasks.
+                    <span>Stay organized.</span>
+                </h1>
+
+                <p class="hero-text">
+                    Create, manage, update and track your tasks
+                    with persistent database storage.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- Add Task -->
+
+        <section class="card">
+
+            <div class="section-header">
+                <div>
+                    <h2>Add a new task</h2>
+                    <p>Create a task and save it to your database.</p>
+                </div>
+            </div>
+
+            <form id="taskForm">
+
+                <div class="form-grid">
+
+                    <div class="form-group full">
+                        <label for="title">Task title</label>
+
+                        <input type="text" id="title" placeholder="e.g. Complete database project" required>
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <label for="description">
+                            Description
+                        </label>
+
+                        <textarea id="description" placeholder="Add some details..." rows="4"></textarea>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="dueDate">
+                            Due date
+                        </label>
+
+                        <input type="date" id="dueDate">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="status">
+                            Status
+                        </label>
+
+                        <select id="status">
+
+                            <option value="pending">
+                                Pending
+                            </option>
+
+                            <option value="completed">
+                                Completed
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-actions">
+
+                    <button type="submit" class="btn primary" id="submitButton">
+                        Add Task
+                    </button>
+
+                    <button type="button" class="btn secondary hidden" id="cancelButton">
+                        Cancel
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <!-- Statistics -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <span>Total Tasks</span>
+                <strong id="totalTasks">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>Pending</span>
+                <strong id="pendingTasks">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span>Completed</span>
+                <strong id="completedTasks">0</strong>
+            </div>
+
+        </section>
+
+
+        <!-- Tasks -->
+
+        <section class="card">
+
+            <div class="section-header tasks-header">
+
+                <div>
+                    <h2>Your tasks</h2>
+
+                    <p>
+                        Tasks stored in your database.
+                    </p>
+                </div>
+
+
+                <select id="filter">
+
+                    <option value="all">
+                        All Tasks
+                    </option>
+
+                    <option value="pending">
+                        Pending
+                    </option>
+
+                    <option value="completed">
+                        Completed
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div id="message"></div>
+
+            <div id="taskList" class="task-list">
+
+                <div class="loading">
+                    Loading tasks...
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            TaskVault — Project 3 Database Integration
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

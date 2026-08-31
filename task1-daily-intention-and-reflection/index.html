@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Intention & Reflection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app">
+        <header>
+            <h1>🌱 Daily Intention</h1>
+            <div class="subhead">
+                <span>Set your purpose. Reflect each day.</span>
+                <span class="streak" id="streakDisplay">🔥 0 days</span>
+            </div>
+        </header>
+
+        <!-- Tabs -->
+        <nav class="tabs">
+            <button class="tab-btn active" data-tab="today">📝 Today</button>
+            <button class="tab-btn" data-tab="history">📆 History</button>
+        </nav>
+
+        <!-- ===== TODAY PANEL ===== -->
+        <section class="panel active" id="panel-today">
+            <h2 class="panel-heading">Set today's intention</h2>
+            <form id="intentionForm">
+                <label for="intentionText">What do you want to focus on today?</label>
+                <textarea id="intentionText" placeholder="e.g. Be patient, finish the project, enjoy the little things…"
+                    required></textarea>
+
+                <label for="moodSelect">How are you feeling right now?</label>
+                <select id="moodSelect">
+                    <option value="😊 Happy">😊 Happy</option>
+                    <option value="😌 Calm">😌 Calm</option>
+                    <option value="😐 Neutral">😐 Neutral</option>
+                    <option value="😕 Anxious">😕 Anxious</option>
+                    <option value="😔 Tired">😔 Tired</option>
+                </select>
+
+                <div class="flex-right">
+                    <button type="submit" class="btn">💾 Save Intention</button>
+                </div>
+            </form>
+
+            <hr />
+
+            <h2 class="panel-heading">🌙 Evening reflection</h2>
+            <form id="reflectionForm">
+                <label for="reflectionText">How did today go? What did you learn?</label>
+                <textarea id="reflectionText" placeholder="Write your reflection…"></textarea>
+
+                <label>Rate your day (1–5)</label>
+                <div class="rating-stars" id="ratingStars">
+                    <span data-value="1">★</span>
+                    <span data-value="2">★</span>
+                    <span data-value="3">★</span>
+                    <span data-value="4">★</span>
+                    <span data-value="5">★</span>
+                </div>
+                <input type="hidden" id="ratingValue" value="0" />
+
+                <div class="flex-right">
+                    <button type="submit" class="btn">✨ Save Reflection</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- ===== HISTORY PANEL ===== -->
+        <section class="panel" id="panel-history">
+            <h2 class="panel-heading">All entries</h2>
+            <div id="timelineContainer">
+                <div class="empty-msg">No entries yet. Start your journey today!</div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

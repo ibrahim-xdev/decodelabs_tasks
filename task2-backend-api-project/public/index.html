@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Application</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Job Application</h1>
+            <p class="subtitle">Tell us a bit about yourself and we'll get back to you.</p>
+
+            <form id="applicationForm">
+                <div class="form-group">
+                    <label for="name">Full name</label>
+                    <input type="text" id="name" name="name" placeholder="Jane Doe" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" min="1" placeholder="25" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">Experience level</label>
+                    <select id="experience" name="experience" required>
+                        <option value="">Select one</option>
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Advanced">Advanced</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Why do you want this role?</label>
+                    <textarea id="message" name="message" placeholder="A few sentences about you..."
+                        required></textarea>
+                </div>
+
+                <button type="submit" id="submitBtn">Submit application</button>
+            </form>
+
+            <div class="result hidden" id="result"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
