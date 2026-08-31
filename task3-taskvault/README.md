@@ -10,6 +10,9 @@ TaskVault is a simple full-stack Task Management System built with HTML, CSS, Ja
 - Set due dates
 - Store tasks permanently in MySQL
 
+## Live Link
+https://taskvault-frontend-ossb.onrender.com/
+
 ## Tech Stack
 
 - **Frontend:** HTML, CSS, JavaScript
