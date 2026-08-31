@@ -10,6 +10,9 @@ Helps you stay mindful, track your mood, and build a meaningful routine.
 - **History timeline** – see all past entries, including mood and rating.
 - **Streak counter** – tracks how many consecutive days you’ve used the app.
 
+## Live Link:
+https://ibrahim-xdev.github.io/decodelabs_tasks/task1-daily-intention-and-reflection/
+
 ## How to use
 
 1. Open `index.html` in your browser (no server needed).
